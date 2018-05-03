@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Kenia');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Lobster');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Lato|PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Exo');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*   CABEÇALHO   */
+
+#burguer {
+  display: none;
+}
+
+label .fa-bars {
+  position: fixed;
+  font-size: 2em;
+  top: 8px;
+  left: 8px;
+  transition: transform 0.2s linear;
+  z-index: 2;
+}
+
+@media all and (min-width: 500px) {
+  label .fa-bars {
+    font-size: 2.5em;
+  }
+}
+
+@media all and (min-width: 768px) {
+  label .fa-bars {
+    display: none;
+  }
+}
+
+#burguer:checked ~ label .fa-bars {
+  transform: rotate(-180deg);
+}
+
+header {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  -webkit-transition: background-color 1.5s;
+  z-index: 2;
+}
+
+@media all and (min-width: 768px) {
+  header {
+    width: 0;
+  }
+}
+
+nav.menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #3f3f3f;
+  opacity: 0.2;
+  left: -100%;
+  transition: all 0.2s linear;
+  z-index: 1;
+}
+p#logo{
+  display: inline-block;
+  justify-content: flex-start;
+  font-family: 'Kenia', cursive;
+  float: left;
+  margin-left: -900px;
+  text-transform: uppercase;
+
+  color: white;
+  font-size: 4.5em;
+  margin-top: 0px;
+
+  -webkit-transition: width .5s, height .5s, margin-right .5s, margin-top .5s;
+  display: none;
+}
+ .propaganda{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.propaganda h1 {
+  margin-top: 200px;
+  font-size: 10em;
+
+  font-family: 'Righteous', cursive;
+}
+.propaganda h3{
+  margin-top: -30px;
+  font-size: 3em;
+  font-family: 'Reem Kufi', sans-serif;
+}
+
+
+
+
+@media all and (min-width: 768px) {
+  nav.menu {
+    flex-direction: row;
+    justify-content: flex-end;
+    opacity: 1;
+    left: 0%;
+    width: 100%;
+
+  }
+}
+
+#burguer:checked ~ nav.menu {
+  opacity: 1;
+  left: 0%;
+}
+
+nav.menu a {
+  text-decoration: none;
+  font-family: 'Patua One', cursive;
+  color: #fff;
+  line-height: 3em;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #fff;
+  transition: color 0.2s linear;
+}
+
+@media all and (min-width: 500px) {
+  nav.menu a {
+    line-height: 3.5em;
+    letter-spacing: 3px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  nav.menu a {
+    border-bottom: 0px;
+    margin-right: 25px;
+    font-size: 1.1em;
+  }
+  nav.menu a:hover {
+    color: #FA8072;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  nav.menu a {
+    line-height: 4em;
+    font-size: 1.2em;
+  }
+}
+
+nav.menu a span {
+  margin-left: 10px;
+}
+
+/*   CORPO   */
+
+main {
+  padding: 40px 0px 35px 0px;
+  background-image: url("../imagens/multimidia-back.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: padding 0.2s linear;
+}
+
+@media all and (min-width: 768px) {
+  main {
+    background-image: url("../imagens/s4.jpg");
+    padding: 80px 0px 35px 0px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  main {
+    background-image: url("../imagens/capa1.jpg");
+    padding: 120px 0px 35px 0px;
+  }
+}
+
+section#videos {
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-row-gap: 50px;
+  transition: margin 0.2s linear;
+  /*border: 1px solid black;*/
+}
+
+@media all and (min-width: 768px) {
+  section#videos {
+    grid-template-columns: 1% 48.5% 1% 48.5% 1%;
+  }
+}
+
+section#videos .musica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
+  grid-column: 2/3;
+  /*border: 1px solid black;*/
+}
+
+@media all and (min-width: 500px) {
+  section#videos .musica {
+    height: 300px;
+  }
+}
+
+@media all and (min-width: 600px) {
+  section#videos .musica {
+    height: 400px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  section#videos .musica {
+    height: 415px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  section#videos .impar {
+    grid-column: 2/3;
+  }
+  section#videos .par {
+    grid-column: 4/5;
+  }
+}
+
+section#videos .musica span {
+  padding: 15px;
+  font-family: Patua One;
+  font-size: 1.3em;
+  color: #fff;
+}
+
+@media all and (min-width: 600px) {
+  section#videos .musica span {
+    font-size: 1.5em;
+  }
+}
+
+@media all and (min-width: 768px) {
+  section#videos .musica span {
+    font-size: 1.4em;
+    color: #000;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  section#videos .musica span {
+    color: #fff;
+  }
+}
+
+section#videos .musica iframe {
+  width: 95%;
+  height: 75%;
+  border: 5px solid black;
+  box-shadow: 7px 7px 5px 0px rgba(0,0,0,0.75);
+}
+
+section#videos .musica iframe:hover {
+  border: 5px solid white;
+  transition: border 0.5s;
+}
+
+@media all and (min-width: 500px) {
+  section#videos .musica iframe {
+    height: 80%;
+  }
+}
+
+@media all and (min-width: 600px) {
+  section#videos .musica iframe {
+    height: 90%;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  section#videos .musica iframe {
+    box-shadow: 7px 7px 15px 0px rgba(255,255,255,1.75);
+  }
+}
+
+/*   RODAPÉ   */
+
+footer {
+  background-color: #333;
+  background-image: url("../imagens/hands.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+@media all and (min-width: 1024px){
+  footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 40px 0;
+  }
+}
+
+footer section {
+  margin-top: 30px;
+}
+
+/*@media all and (min-width: 1000px) {
+  footer section {
+    border: 1px solid red;
+  }
+}*/
+
+footer h2, footer h3 {
+  font-family: 'Exo', sans-serif;
+}
+
+footer h2 {
+  font-size: 1.8em;
+}
+
+@media all and (min-width: 600px) {
+  footer h2 {
+    font-size: 2.3em;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  footer #news h2, footer #redes h2 {
+    font-size: 1.7em;
+  }
+  footer #news p {
+    font-size: 1em;
+  }
+}
+
+footer h3 {
+  font-size: 1.3em;
+}
+
+@media all and (min-width: 600px) {
+  footer h3 {
+    font-size: 1.5em;
+  }
+}
+
+footer p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+}
+
+@media all and (min-width: 600px) {
+ footer p {
+   font-size: 1.5em;
+ }
+}
+
+@media all and (min-width: 1024px) {
+  footer #contato {
+    margin-top: -68px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  footer #facebook {
+    margin-top: 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+
+footer #news {
+  width: 95%;
+}
+
+@media all and (min-width: 600px) {
+  footer #news {
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  footer #news {
+    margin-top: -132px;
+    margin-left: 10%;
+  }
+}
+
+footer #news form {
+  margin-top: 10px;
+  display: flex;
+}
+
+footer #news .fa {
+  border-right: 1px solid #ccc;
+  color: #000;
+  background: #fff;
+  padding: 15px 10px 15px 10px;
+}
+
+footer #news input {
+  padding: 0 0 0 8px;
+  width: 60%;
+  border: none;
+}
+
+footer #news a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  text-decoration: none;
+  font-family: 'Exo', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  background: #008CBA;
+}
+
+@media all and (min-width: 1024px) {
+  footer #redes {
+    grid-column: 3/4;
+    margin-top: -85px;
+  }
+}
+
+footer #redes #icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 2em;
+}
+
+footer #redes #icons a {
+  text-decoration: none;
+  color: #fff;
+}

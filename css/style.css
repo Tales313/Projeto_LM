@@ -1,0 +1,742 @@
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Kenia');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Lobster');
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Lato|PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Exo');
+@import url('https://fonts.googleapis.com/css?family=Righteous');
+@import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*   CABEÇALHO   */
+
+#burguer {
+  display: none;
+}
+
+label .fa-bars {
+  position: fixed;
+  font-size: 2em;
+  top: 8px;
+  left: 8px;
+  transition: transform 0.2s linear;
+  z-index: 2;
+}
+
+@media all and (min-width: 500px) {
+  label .fa-bars {
+    font-size: 2.5em;
+  }
+}
+
+@media all and (min-width: 768px) {
+  label .fa-bars {
+    display: none;
+  }
+}
+
+#burguer:checked ~ label .fa-bars {
+  transform: rotate(-180deg);
+}
+
+header {
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  -webkit-transition: background-color 1.5s;
+  z-index: 2;
+}
+
+@media all and (min-width: 768px) {
+  header {
+    width: 0;
+  }
+}
+
+nav.menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #3f3f3f;
+  opacity: 0.2;
+  left: -100%;
+  transition: all 0.2s linear;
+  z-index: 1;
+}
+p#logo{
+  display: inline-block;
+  justify-content: flex-start;
+  font-family: 'Kenia', cursive;
+  float: left;
+  margin-left: -900px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 4.5em;
+  margin-top: 0px;
+  -webkit-transition: width .5s, height .5s, margin-right .5s, margin-top .5s;
+  display: none;
+}
+
+ .propaganda{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.propaganda h1 {
+  margin-top: 200px;
+  font-size: 10em;
+  font-family: 'Righteous', cursive;
+}
+
+.propaganda h3{
+  margin-top: -30px;
+  font-size: 3em;
+  font-family: 'Reem Kufi', sans-serif;
+}
+
+@media all and (min-width: 768px) {
+  nav.menu {
+    flex-direction: row;
+    justify-content: flex-end;
+    opacity: 1;
+    left: 0%;
+    width: 100%;
+  }
+}
+
+#burguer:checked ~ nav.menu {
+  opacity: 1;
+  left: 0%;
+}
+
+nav.menu a {
+  text-decoration: none;
+  font-family: 'Patua One', cursive;
+  color: #fff;
+  line-height: 3em;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #fff;
+  transition: color 0.2s linear;
+}
+
+@media all and (min-width: 500px) {
+  nav.menu a {
+    line-height: 3.5em;
+    letter-spacing: 3px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  nav.menu a {
+    border-bottom: 0px;
+    margin-right: 25px;
+    font-size: 1.1em;
+  }
+  nav.menu a:hover {
+    color: #FA8072;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  nav.menu a {
+    line-height: 4em;
+    font-size: 1.2em;
+  }
+}
+
+nav.menu a span {
+  margin-left: 10px;
+}
+
+/*   CORPO   */
+
+main section#foto1 {
+  height: 100vh;
+  width: 100%;
+  background-image: url("../imagens/p7.jpg");
+  background-position: center center;
+  background-size: cover;
+
+}
+
+main .fa-pencil, main .fa-users, main .fa-camera-retro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  font-size: 2em;
+  border: 4px solid black;
+  border-radius: 50%;
+}
+
+@media all and (min-width: 600px) {
+  main .fa-pencil, main .fa-users, main .fa-camera-retro {
+    font-size: 3em;
+    width: 130px;
+    height: 130px;
+  }
+}
+
+main h1 {
+  font-size: 2.4em;
+}
+
+@media all and (min-width: 600px) {
+  main h1 {
+    font-size: 2.7em;
+  }
+}
+
+main section#descricao {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 25px;
+  justify-items: center;
+  text-align: center;
+  font-family: 'Exo', sans-serif;
+}
+
+main section#descricao p {
+  font-size: 1.4em;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+@media all and (min-width: 600px) {
+  main section#descricao p {
+    font-size: 1.7em;
+  }
+}
+
+main section#agenda {
+  padding: 80px 0 80px 0;
+  background: #8B0000;
+  background-image: url("../imagens/hands.jpg");
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+  margin-top: 40px;
+  background-blend-mode: multiply;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: 'Exo', sans-serif;
+}
+
+@media all and (min-width: 768px) {
+  main section#agenda {
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
+    padding: 120px 0 130px 0;
+  }
+}
+
+main section#agenda #shows {
+  display: flex;
+  flex-direction: column;
+}
+
+@media all and (min-width: 1024px) {
+  main section#agenda #shows {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+main section#agenda #shows .show {
+  border: 2px solid black;
+  background: white;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 3fr;
+  grid-gap: 1px;
+  font-family: 'Patua One', cursive;
+  margin: 5px;
+}
+
+main section#agenda #shows .show .dia {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  background: gray;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+
+main section#agenda #shows .show .mes {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  background: gray;
+  font-family: 'Exo', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+main section#agenda #shows .show .local {
+  padding: 3px;
+  color: black;
+}
+
+main section#agenda #shows .show .cidade {
+  padding: 3px;
+  color: black;
+  align-self: end;
+}
+
+main section#agenda div#botao-agenda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+main section#agenda div#botao-agenda a {
+  font-weight: bold;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #000;
+  padding: 10px 20px 10px;
+  transition: all 0.2s;
+  will-change: background, color;
+}
+
+main section#agenda div#botao-agenda a:hover {
+  background: #f45342;
+  color: #fff;
+}
+
+main section#integrantes {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 25px;
+  justify-items: center;
+  text-align: center;
+  font-family: 'Exo', sans-serif;
+}
+
+main section#integrantes #integrantes-flex {
+  display: grid;
+  grid-gap: 25px;
+}
+
+main section#integrantes .integrante .flex-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+@media all and (min-width: 768px) {
+  main section#integrantes #integrantes-flex {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  main div.integrante {
+    width: 33%;
+  }
+  main section#integrantes .integrante .flex-div{
+    flex-direction: row;
+    width: 55%;
+    justify-content: space-around;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  main section#integrantes .integrante .flex-div {
+    width: 40%;
+  }
+}
+
+main section#integrantes .integrante {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main section#integrantes .integrante h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5em;
+	font-weight: 700;
+}
+
+main section#integrantes .integrante img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+main section#integrantes .integrante  .flex-div a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  text-decoration: none;
+  margin-top: 7px;
+  color: #000;
+  font-size: 2em;
+  border-radius: 50%;
+}
+
+main section#integrantes .integrante .flex-div  a:hover{
+  color: white;
+  background: black;
+  transition: .2s;
+}
+
+/*fotos*/
+
+main section#galeria {
+  margin-top: 60px;
+}
+
+.titulo h1{
+      font-family: 'Exo', sans-serif;
+}
+.titulo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fotos{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6, 200px);
+  grid-template-areas: "header ali " "main eli" "aside ili" "footer oli" "pasa pase" "pasi paso";
+  align-items: stretch;
+  padding-top: 25px;
+  grid-row-gap: 0px;
+  line-height: 0;
+
+}
+
+@media all and (min-width: 430px) {
+  .fotos {
+    grid-template-rows: repeat(6, 220px);
+  }
+}
+
+@media all and (min-width: 470px) {
+  .fotos {
+    grid-template-rows: repeat(6, 240px);
+  }
+}
+
+@media all and (min-width: 530px) {
+  .fotos {
+    grid-template-rows: repeat(6, 270px);
+  }
+}
+
+@media all and (min-width: 580px) {
+  .fotos {
+    grid-template-rows: repeat(6, 290px);
+  }
+}
+
+@media all and (min-width: 620px) {
+  .fotos {
+    grid-template-rows: repeat(6, 310px);
+  }
+}
+
+@media all and (min-width: 660px) {
+  .fotos {
+    grid-template-rows: repeat(6, 330px);
+  }
+}
+
+@media all and (min-width: 700px) {
+  .fotos {
+    grid-template-rows: repeat(6, 350px);
+  }
+}
+@media all and (min-width: 750px) {
+  .fotos {
+    grid-template-rows: repeat(6, 380px);
+  }
+}
+@media all and (min-width: 768px){
+  .fotos {
+    grid-template-rows: repeat(4, 330px);
+    grid-template-columns: 1fr 1fr 1fr;
+     grid-template-areas: "header ali main" "eli aside ili" "footer oli pasa" "pase pasi paso";
+  }
+}
+
+@media all and (min-width: 1024px){
+  .fotos{
+    grid-template-areas: "header ali main eli"  "aside ili footer oli" "pasa pase pasi paso";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 200px);
+    grid-row-gap: 40px;
+    width: 90%;
+    justify-items: center;
+    margin: 0 auto;
+    height: 700px;
+  }
+  .foto1, .foto2, .foto3, .foto4, .foto5, .foto6, .foto7, .foto8, .foto9, .foto10, .foto11, .foto12 {
+    border: 5px solid #fff;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0,0,0,.4);
+    margin: 10px;
+  }
+  /*animação*/
+  .fotos .foto1, .fotos .foto2, .fotos .foto3, .fotos .foto4, .fotos .foto5, .fotos .foto6, .fotos .foto7, .fotos .foto8, .fotos .foto9, .fotos .foto10, .fotos .foto11, .fotos .foto12 {
+    width: 195px;
+    height: 195px;
+    background-position: 50% 50%;
+    background-size: 400px 400px;
+  }
+    /*animação hover*/
+  .fotos .foto1:hover, .fotos .foto2:hover, .fotos .foto3:hover, .fotos .foto4:hover, .fotos .foto5:hover, .fotos .foto6:hover,
+  .fotos .foto7:hover, .fotos .foto8:hover, .fotos .foto9:hover, .fotos .foto10:hover, .fotos .foto11:hover, .fotos .foto12:hover {
+    background-position: 0% 0%;
+    background-size: 200px 200px;
+    -webkit-transform: scale(1.5);
+    -webkit-transition: all .4s ease-in;
+  }
+}
+
+
+
+
+.area{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+ .fotos .foto1{
+  grid-area: header;
+  background-image: url('../imagens/s1.jpg');
+}
+
+ .fotos .foto2{
+  grid-area: ali;
+  background-image: url('../imagens/s2.jpg');
+}
+
+ .fotos .foto3{
+  grid-area: main;
+  background-image: url('../imagens/s3.jpg');
+}
+
+ .fotos .foto4{
+  grid-area: eli;
+  background-image: url('../imagens/s4.jpg');
+}
+
+ .fotos .foto5{
+  grid-area: aside;
+  background-image: url('../imagens/s5.jpg');
+}
+
+ .fotos .foto6{
+  grid-area: ili;
+  background-image: url('../imagens/s6.jpg');
+}
+
+ .fotos .foto7{
+  grid-area: footer;
+  background-image: url('../imagens/s7.jpg');
+}
+
+ .fotos .foto8{
+  grid-area: oli;
+  background-image: url('../imagens/s8.jpg');
+}
+.fotos .foto9{
+  grid-area: pasa;
+  background-image: url('../imagens/sjs1.jpg');
+}
+.fotos .foto10{
+  grid-area: pase;
+  background-image: url('../imagens/sjs2.jpg');
+}
+.fotos .foto11{
+  grid-area: pasi;
+  background-image: url('../imagens/sjs3.jpg');
+}
+.fotos .foto12{
+  grid-area: paso;
+  background-image: url('../imagens/sjs4.jpg');
+}
+
+
+
+
+/*   RODAPÉ   */
+
+footer {
+  background-color: #333;
+  background-image: url("../imagens/hands.jpg");
+  background-size: cover;
+  background-blend-mode: multiply;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+@media all and (min-width: 1024px){
+  footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 60px;
+    padding: 40px 0;
+  }
+}
+
+footer section {
+  margin-top: 30px;
+}
+
+footer h2, footer h3 {
+  font-family: 'Exo', sans-serif;
+}
+
+footer h2 {
+  font-size: 1.8em;
+}
+
+@media all and (min-width: 600px) {
+  footer h2 {
+    font-size: 2.3em;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  footer #news h2, footer #redes h2 {
+    font-size: 1.7em;
+  }
+  footer #news p {
+    font-size: 1em;
+  }
+}
+
+footer h3 {
+  font-size: 1.3em;
+}
+
+@media all and (min-width: 600px) {
+  footer h3 {
+    font-size: 1.5em;
+  }
+}
+
+footer p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1em;
+}
+
+@media all and (min-width: 600px) {
+ footer p {
+   font-size: 1.5em;
+ }
+}
+
+@media all and (min-width: 1024px) {
+  footer #contato {
+    margin-top: -68px;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  footer #facebook {
+    margin-top: 0;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+
+footer #news {
+  width: 95%;
+}
+
+@media all and (min-width: 600px) {
+  footer #news {
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  footer #news {
+    margin-top: -132px;
+    margin-left: 10%;
+  }
+}
+
+footer #news form {
+  margin-top: 10px;
+  display: flex;
+}
+
+footer #news .fa {
+  border-right: 1px solid #ccc;
+  color: #000;
+  background: #fff;
+  padding: 15px 10px 15px 10px;
+}
+
+footer #news input {
+  padding: 0 0 0 8px;
+  width: 60%;
+  border: none;
+}
+
+footer #news a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  text-decoration: none;
+  font-family: 'Exo', sans-serif;
+  font-weight: bold;
+  color: #fff;
+  background: #008CBA;
+}
+
+@media all and (min-width: 1024px) {
+  footer #redes {
+    grid-column: 3/4;
+    margin-top: -85px;
+  }
+}
+
+footer #redes #icons {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 2em;
+}
+
+footer #redes #icons a {
+  text-decoration: none;
+  color: #fff;
+}
