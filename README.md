@@ -14,4 +14,4 @@ Divulgar o trabalho da banda.
 
 ## Screenshots
 * http://imgur.com/a/11Z3u
-* https://github.com/Tales313/So-Jesus-Salva/tree/gh-pages/screenshots
+* https://github.com/Tales313/Projeto_LM/tree/master/screenshots
